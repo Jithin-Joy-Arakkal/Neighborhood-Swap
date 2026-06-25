@@ -1,0 +1,11 @@
+nav{
+    padding: 20px;
+    text-align: right;
+    opacity: 1;
+}
+
+.link{
+    font-family: "Afacad-variable";
+    padding: 5px;
+    color: black;
+}

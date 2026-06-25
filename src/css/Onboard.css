@@ -1,0 +1,33 @@
+h1{
+    color: #117E00;
+    font-family: "Afacad-variable";
+    font-weight: 1000;
+    margin-top: 15vh;
+    line-height: 7vh;
+}
+
+.onboard-content{
+    justify-content: center;
+    background-image: url('../assets/Onboard_bimg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.start{
+    color:#117E00;
+    background-color: white;
+    border-color: #117E00;
+    border-radius: 12.15px;
+    padding: 2vh;
+    width: 20vw;
+    position: absolute;
+    bottom: 20vh;
+    left: 50%;
+    transform: translateX(-50%); /* Centers horizontally */
+    font-size: 1rem;
+    font-family: Arial;
+    font-weight: 700;
+}
