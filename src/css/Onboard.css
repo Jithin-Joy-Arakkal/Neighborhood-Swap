@@ -1,33 +1,90 @@
 h1{
     color: #117E00;
-    font-family: "Afacad-variable";
-    font-weight: 1000;
-    margin-top: 15vh;
-    line-height: 7vh;
+    font-weight: 500;
+    margin-top: 8vh;
+    line-height: 10vh;
+    font-family: "Afacad Variable";
+    margin-bottom: auto;
 }
 
 .onboard-content{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-image: url('../assets/Onboard_bimg.jpg');
     background-size: cover;
     background-position: center;
     height: 100%;
     width: 100%;
     position: relative;
+    padding: 0.5rem;
 }
 
-.start{
+.login-input{
+    font-family: monospace;
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    width: 17vw;
+    border-radius: 4px;
+    border: none;
+}
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    padding: 2vh;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgb(17, 126, 0, 0.6);
+    margin-top: auto;
+    margin-bottom: 13vh;
+    border-radius: 10px;
+    
+}
+
+p{
+    color: white;
+    padding: 0.5rem;
+}
+
+.login-button{
+    color: white;
+    background-color: #117E00;
+    border: none;
+    border-radius: 10px;
+    padding: 1vh;
+    width: 13vw;
+    font-size: 1rem;
+    font-family: "Afacad Variable";
+    margin-top: auto;
+}
+
+.login-button:hover{
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.signup-button{
+    border: 2px solid #117E00;
     color:#117E00;
     background-color: white;
-    border-color: #117E00;
-    border-radius: 12.15px;
-    padding: 2vh;
-    width: 20vw;
-    position: absolute;
-    bottom: 20vh;
-    left: 50%;
-    transform: translateX(-50%); /* Centers horizontally */
+    border-radius: 10px;
+    padding: 1vh;
+    width: 13vw;
     font-size: 1rem;
-    font-family: Arial;
-    font-weight: 700;
+    font-family: "Afacad Variable";
+    margin-top: auto;
+    margin-bottom: 10vh;
+}
+
+.signup-button:hover{
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
