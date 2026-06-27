@@ -1,9 +1,9 @@
-import ChoppingBoardImg from '../assets/Chopping_Board.jpg';
-import CoffeeTableImg from '../assets/Coffee_Table.jpg';
-import CeilingFanImg from '../assets/Ceiling_fan.jpg';
-import MixerGrinderImg from '../assets/Mixer_Grinder.jpg';
-import BedsideTableImg from '../assets/Bedside_Table.jpg';
-import AlarmClockImg from '../assets/Alarm_Clock.jpg';
+import ChoppingBoardImg from '../assets/images/Chopping_Board.jpg';
+import CoffeeTableImg from '../assets/images/Coffee_Table.jpg';
+import CeilingFanImg from '../assets/images/Ceiling_fan.jpg';
+import MixerGrinderImg from '../assets/images/Mixer_Grinder.jpg';
+import BedsideTableImg from '../assets/images/Bedside_Table.jpg';
+import AlarmClockImg from '../assets/images/Alarm_Clock.jpg';
 
 const initialItems = [
     {

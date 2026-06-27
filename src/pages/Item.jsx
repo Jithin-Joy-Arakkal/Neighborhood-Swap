@@ -19,7 +19,7 @@ function Item(){
     return(
         <div className="item-content">
             <div className="img-container">
-                <img src={item.image} alt={name} />
+                <img src={item.image} alt={item.name} />
             </div>
             <h2>{item.name}</h2>
             <p>{item.description}</p>

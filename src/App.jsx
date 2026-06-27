@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home.jsx'
 import Post from './pages/Post.jsx'
@@ -27,8 +27,8 @@ function App() {
           element={<Onboard/>}
         />
         <Route
-        path="/item/:id"
-        element={<Item/>}
+          path="/item/:id"
+          element={<Item/>}
         />
       </Routes>
     </>
