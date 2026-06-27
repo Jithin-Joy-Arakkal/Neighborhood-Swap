@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home.jsx'
 import Post from './pages/Post.jsx'
 import Onboard from './pages/Onboard.jsx'
+import Item from './pages/Item.jsx'
 import './App.css'
 
 function App() {
@@ -10,25 +11,26 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Navbar></Navbar>
+      <Navbar></Navbar>
 
-        <Routes>
-          <Route
-            path="/home"
-            element={<Home/>}
-          />
-          <Route
-            path="/post"
-            element={<Post/>}
-          />
-          <Route
-            path="/"
-            element={<Onboard/>}
-          />
-        </Routes>
-        
-      </BrowserRouter>
+      <Routes>
+        <Route
+          path="/home"
+          element={<Home/>}
+        />
+        <Route
+          path="/post"
+          element={<Post/>}
+        />
+        <Route
+          path="/"
+          element={<Onboard/>}
+        />
+        <Route
+        path="/item/:id"
+        element={<Item/>}
+        />
+      </Routes>
     </>
   );
 }

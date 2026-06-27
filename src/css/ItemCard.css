@@ -1,0 +1,73 @@
+.itemcard{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 1rem;
+    background-color: white;
+    width: 30vw;
+}
+
+.itemcard:hover{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.itemcard .item-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: relative;
+}
+
+.itemcard .type-container{
+    text-align: center;
+    background-color: rgb(85, 65, 238);
+    color: white;
+    padding: 0.2rem;
+    width: 5rem;
+    border-radius: 20px;
+}
+
+.itemcard .image-container{
+    height: 10rem;
+    width: 10rem;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.itemcard img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.itemcard .favourite-button{
+    background: none;
+    border: 1px solid black;
+    font-size: medium;
+    cursor: pointer;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%; /* Creates the perfect circle */
+    display: inline-block;
+    box-sizing: border-box; /* Includes padding/border in width/height */
+    text-align: center;
+    line-height: 1.5rem; /* Vertically centers the single character */
+}
+
+.itemcard .favourite-button:hover{
+    transform: translateY(-2px);
+}
+
+.item-details p{
+    color: black;
+}
