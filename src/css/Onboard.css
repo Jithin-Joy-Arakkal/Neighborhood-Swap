@@ -62,6 +62,7 @@ p{
     font-size: 1rem;
     font-family: "Afacad Variable";
     margin-top: auto;
+    cursor: pointer;
 }
 
 .login-button:hover{
@@ -81,6 +82,7 @@ p{
     font-family: "Afacad Variable";
     margin-top: auto;
     margin-bottom: 10vh;
+    cursor: pointer;
 }
 
 .signup-button:hover{

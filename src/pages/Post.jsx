@@ -1,22 +1,13 @@
 import { useItems } from "../context/ItemContext";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import categories from "../data/categories";
+import types from "../data/types";
 import '../css/Post.css'
 
 import default_img from "../assets/default_img.png"
 
 function Post(){
-    const categories = [
-        "Furniture",
-        "Electronics",
-        "Kitchen Essentials",
-        "Bedroom Items"
-    ];
-    const types = [
-        "Give",
-        "Swap",
-        "Sell"
-    ];
     const { items, setItems } = useItems();
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
@@ -34,7 +25,8 @@ function Post(){
                 description,
                 category,
                 type,
-                image
+                image,
+                isFavourite : false
             };
 
         setItems(prevItems => [...prevItems, newItem]);

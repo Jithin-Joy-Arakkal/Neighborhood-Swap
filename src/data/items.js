@@ -12,7 +12,8 @@ const initialItems = [
         description : `Built from premium, solid wood, this cutting board is designed to withstand years of daily kitchen use. Its sturdy construction ensures it can handle heavy chopping, slicing, and dicing without warping, cracking, or breaking.`,
         category : "Kitchen Essentials",
         type : "Sell",
-        image : ChoppingBoardImg
+        image : ChoppingBoardImg,
+        isFavourite : false
     },
     {
         id : 2,
@@ -20,7 +21,8 @@ const initialItems = [
         description : `Made of the finest quality engineered wood and robust particle board with a 15mm thickness, it is built to last and withstand the rigors of daily use. It features: 1 surface top and 2 shelves, offering ample storage space and a total load capacity of 35 kg`,
         category : "Furniture",
         type : "Swap",
-        image : CoffeeTableImg
+        image : CoffeeTableImg,
+        isFavourite : false
     },
     {
         id : 3,
@@ -29,7 +31,8 @@ const initialItems = [
         Low Power Consumption fan designed to save on your electricity bill. High speed ceiling fan with new shades and ribbed blades for enhancing aesthetics.`,
         category : "Electronics",
         type : "Swap",
-        image : CeilingFanImg
+        image : CeilingFanImg,
+        isFavourite : false
     },
     {
         id : 4,
@@ -40,7 +43,8 @@ Grind & Store Jar for Instant Fresh Grinding & Storage
 1.5 Ltr Juicer Jar for dual operation - as Juicer & Bender`,
         category : "Kitchen Essentials",
         type : "Sell",
-        image : MixerGrinderImg
+        image : MixerGrinderImg,
+        isFavourite : false
     },
     {
         id : 5,
@@ -48,7 +52,8 @@ Grind & Store Jar for Instant Fresh Grinding & Storage
         description : `Ideal Bedside Table for Bedroom. This compact wooden bedside table is perfect for everyday use beside the bed. A practical bed side table for bedroom that fits modern homes.`,
         category : "Furniture",
         type : "Swap",
-        image : BedsideTableImg
+        image : BedsideTableImg,
+        isFavourite : false
     },
     {
         id : 6,
@@ -60,7 +65,8 @@ Cordless & Travel-Ready
 Sleek Modern Aesthetic`,
         category : "Bedroom Items",
         type : "Sell",
-        image : AlarmClockImg
+        image : AlarmClockImg,
+        isFavourite : false
     }
 ];
 

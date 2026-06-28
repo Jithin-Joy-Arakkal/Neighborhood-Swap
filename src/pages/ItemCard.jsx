@@ -1,11 +1,22 @@
 import { useState } from "react";
+import { useItems } from "../context/ItemContext";
 import { useNavigate } from 'react-router-dom';
 import '../css/ItemCard.css'
 
 function ItemCard({item}){
 
-    const [favourite, setFavourite] = useState(false);
+    const { setItems } = useItems();
     const navigate = useNavigate();
+
+    function toggleFavourite(id) {
+        setItems(prevItems =>
+            prevItems.map(item =>
+            item.id === id
+                ? { ...item, isFavourite: !item.isFavourite }
+                : item
+            )
+        );
+    }
 
     return(
         <div className="itemcard" 
@@ -14,12 +25,12 @@ function ItemCard({item}){
                 <img src={item.image} alt={item.name} />
             </div>
             <div className="item-details">
-                <h4>{item.name}</h4>
+                <h3>{item.name}</h3>
                 <p>{item.category}</p>
                 <p className="type-container">{item.type}</p>
                 <button className="favourite-button" onClick={(e) => {
                     e.stopPropagation();
-                    setFavourite(!favourite);}}>{ favourite ? "❤️" : "🩶" }
+                    toggleFavourite(item.id);}}>{ item.isFavourite ? "❤️" : "🩶" }
                 </button>
             </div>
         </div>
