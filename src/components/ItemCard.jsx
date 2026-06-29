@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useItems } from "../context/ItemContext";
+import { useUsers } from "../context/UserContext";
 import { useNavigate } from 'react-router-dom';
 import '../css/ItemCard.css'
 
@@ -7,16 +8,8 @@ function ItemCard({item}){
 
     const { setItems } = useItems();
     const navigate = useNavigate();
-
-    function toggleFavourite(id) {
-        setItems(prevItems =>
-            prevItems.map(item =>
-            item.id === id
-                ? { ...item, isFavourite: !item.isFavourite }
-                : item
-            )
-        );
-    }
+    const { currentUser, toggleFavourite } = useUsers();
+    const isFavourite = currentUser.favouriteItemIds.includes(item.id);
 
     return(
         <div className="itemcard" 
@@ -30,7 +23,7 @@ function ItemCard({item}){
                 <p className="type-container">{item.type}</p>
                 <button className="favourite-button" onClick={(e) => {
                     e.stopPropagation();
-                    toggleFavourite(item.id);}}>{ item.isFavourite ? "❤️" : "🩶" }
+                    toggleFavourite(item.id);}}>{ isFavourite ? "❤️" : "🩶" }
                 </button>
             </div>
         </div>

@@ -7,7 +7,8 @@ const initialUsers = [
         username : "admin",
         email : "admin@email.com",
         password : "admin123",
-        profilePic : default_img
+        profilePic : default_img,
+        favouriteItemIds : [1, 2]
     }
 ];
 

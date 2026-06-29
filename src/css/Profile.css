@@ -84,9 +84,15 @@ h2{
     cursor: pointer;
 }
 
+.edit-buttons{
+    display: flex;
+    gap: 1rem;
+}
+
 .buttons-box{
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .buttons-box .delete-button{

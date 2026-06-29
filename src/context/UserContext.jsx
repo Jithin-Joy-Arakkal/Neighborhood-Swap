@@ -2,8 +2,6 @@ import { createContext, useContext, useState } from "react";
 import { useItems } from "./ItemContext";
 import initialUsers from "../data/users";
 
-
-
 const UserContext = createContext();
 
 export function UserProvider({ children }) {
@@ -37,8 +35,22 @@ export function UserProvider({ children }) {
         setCurrentUser(null);
     }
 
+    function toggleFavourite(itemId) {
+        const isFavourite = currentUser.favouriteItemIds.includes(itemId);
+
+        const updatedUser = {
+            ...currentUser,
+            favouriteItemIds: isFavourite
+                ? currentUser.favouriteItemIds.filter(id => id !== itemId)
+                : [...currentUser.favouriteItemIds, itemId]
+        };
+
+        updateUser(updatedUser);
+    }
+
     return (
-        <UserContext.Provider value={{ users, setUsers, currentUser, setCurrentUser, updateUser, deleteUser }}>
+        <UserContext.Provider 
+        value={{ users, setUsers, currentUser, setCurrentUser, updateUser, deleteUser, toggleFavourite }}>
             {children}
         </UserContext.Provider>
     );

@@ -75,3 +75,11 @@
     padding: 2rem;
     border-radius: 10px;
 }
+
+.no-items {
+    grid-column: 1 / -1;   /* Span all columns */
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+    padding: 5rem 0;
+}

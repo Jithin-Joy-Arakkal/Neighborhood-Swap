@@ -8,7 +8,7 @@ import "../css/Profile.css";
 function Profile(){
     const [isEditing, setIsEditing] = useState(false);
     const { setItems } = useItems();
-    const { currentUser, setCurrentUser, updateUser, deleteUser } = useUsers();
+    const { users, currentUser, setCurrentUser, updateUser, deleteUser } = useUsers();
     const navigate = useNavigate();
     
     const [formData, setFormData] = useState({
@@ -38,10 +38,33 @@ function Profile(){
         }
     };
 
+    function resetForm() {
+        setFormData({
+            name: currentUser.name,
+            username: currentUser.username,
+            email: currentUser.email,
+            password: currentUser.password,
+            profilePic: currentUser.profilePic
+        });
+    }
+
     function handleSave(e) {
         e.preventDefault();
-        // Check username uniqueness
-        // Check email uniqueness
+        
+        if (!formData.name || !formData.username || !formData.email) {
+            alert("Empty fields.");
+            return;
+        }
+        
+        if (users.some(user => user.username === formData.username && formData.username !== currentUser.username)) {
+            alert("Username already in use.");
+            return;
+        }
+
+        if (users.some(user => user.email === formData.email && formData.email !== currentUser.email)) {
+            alert("Email already in use.");
+            return;
+        }
 
         const updatedUser = {
             id: currentUser.id,
@@ -156,16 +179,28 @@ function Profile(){
                     
                     {
                         isEditing ?
-                        (
-                            <button type="button" 
-                            onClick={handleSave}>
-                                Save
-                            </button>
+                        (   
+                            <div className="edit-buttons">
+                                <button type="button" 
+                                onClick={handleSave}>
+                                    Save
+                                </button>
+                                <button type="button"
+                                onClick={() => {
+                                    setIsEditing(false);
+                                    resetForm();
+                                }}>
+                                    Cancel
+                                </button>
+                            </div>
                         )
                         :
                         (
                             <button type="button" 
-                            onClick={() => setIsEditing(true)}>
+                            onClick={() => {
+                                setIsEditing(true);
+                                resetForm();
+                            }}>
                                 Edit
                             </button>
                         )

@@ -7,6 +7,7 @@
     gap: 1rem;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
 }
 
 .img-container{
@@ -22,9 +23,71 @@ img{
     object-fit: contain;
 }
 
+.item-details{
+    display: grid;
+    grid-template-columns: 6rem auto;
+    column-gap: 1.5rem;
+    row-gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.item-details .details-block{
+    display: inline-flex;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    height: fit-content;
+    width: 20rem;
+    background-color: white;
+    color: black;
+    font-family: "Afacad Variable";
+    font-size: 1rem;
+}
+
+.ownerPic-container{
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    justify-content: center;
+    background: none;
+    border: none;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.ownerPic{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 .item-content p{
     color: black;
     text-align: left;
     white-space: pre-line;
+}
+
+.details-block p{
+    display: inline-block;
+    width: fit-content;
+    margin-top: auto;
+}
+
+.item-content button{
+    border: 2px solid #117E00;
+    color:#117E00;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1vh;
+    width: 13vw;
+    font-size: 1rem;
+    font-family: "Afacad Variable";
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.item-content button:hover{
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }

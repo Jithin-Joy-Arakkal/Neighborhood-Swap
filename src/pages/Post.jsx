@@ -15,7 +15,7 @@ function Post(){
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
     const [type, setType] = useState("");
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState(default_img);
 
     const navigate = useNavigate();
 
@@ -28,7 +28,6 @@ function Post(){
                 category,
                 type,
                 image,
-                isFavourite : false
             };
 
         setItems(prevItems => [...prevItems, newItem]);

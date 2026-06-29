@@ -8,7 +8,10 @@ import Onboard from './pages/Onboard.jsx'
 import Item from './pages/Item.jsx'
 import SignUp from "./pages/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
+import MyPosts from "./pages/myposts.jsx";
+import Favourites from "./pages/favourites.jsx";
 import './App.css'
+
 
 function App() {
   
@@ -20,6 +23,14 @@ function App() {
 
       <Routes>
         <Route
+          path="/"
+          element={<Onboard/>}
+        />
+        <Route
+          path="/signup"
+          element={<SignUp/>}
+        />
+        <Route
           path="/home"
           element={<ProtectedRoute><Home/></ProtectedRoute>}
         />
@@ -28,20 +39,20 @@ function App() {
           element={<ProtectedRoute><Post/></ProtectedRoute>}
         />
         <Route
-          path="/"
-          element={<Onboard/>}
-        />
-        <Route
           path="/item/:id"
           element={<ProtectedRoute><Item/></ProtectedRoute>}
         />
         <Route
-          path="/signup"
-          element={<SignUp/>}
-        />
-        <Route
           path="/profile/:username"
           element={<ProtectedRoute><Profile/></ProtectedRoute>}
+        />
+        <Route
+          path="/myposts/:id"
+          element={<ProtectedRoute><MyPosts/></ProtectedRoute>}
+        />
+        <Route
+          path="/favourites/:id"
+          element={<ProtectedRoute><Favourites/></ProtectedRoute>}
         />
       </Routes>
     </>

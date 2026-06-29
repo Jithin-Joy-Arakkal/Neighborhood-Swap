@@ -1,16 +1,19 @@
 nav{
-    padding: 20px;
-    text-align: right;
+    display: flex;
+    padding: 1rem;
     opacity: 1;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    gap: 2vw;
 }
 
 .link{
-    padding: 10px;
+    padding: 0.5rem;
     color:#117E00;
     background-color: white;
     border: 2px solid #117E00;
     border-radius: 10px;
-    margin-right: 2vw;
     text-align: center;
     display: inline-block;
     width: 10vw;
@@ -22,4 +25,93 @@ nav{
     background-color: rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button{
+    border: 2px solid #117E00;
+    color:#117E00;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 10vw;
+    font-size: 1rem;
+    font-family: "Afacad Variable";
+    cursor: pointer;
+}
+
+.dropdown button:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    width: 220px;
+
+    background: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    z-index: 100;
+    margin-top: 0.5rem;
+
+    align-items: center;
+}
+
+.dropdown-menu .profilePic-container{
+    height: 5rem;
+    width: 5rem;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+
+.dropdown-menu .profilePic-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dropdown-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.dropdown-text p{
+    color: black;
+    padding: 0rem;
+    width: fit-content;
+}
+
+.dropdown-menu .logout-button{
+    border: 2px solid crimson;
+    color: crimson;
+}
+
+hr{
+    border: none;
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    margin: 0.3rem;
 }

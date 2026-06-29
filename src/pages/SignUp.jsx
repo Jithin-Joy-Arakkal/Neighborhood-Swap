@@ -57,7 +57,8 @@ function SignUp(){
             username: formData.username,
             email: formData.email,
             password: formData.password,
-            profilePic: formData.profilePic || default_img
+            profilePic: formData.profilePic || default_img,
+            favouriteItemIds: []
         };
 
         setUsers(prev => [...prev, newUser]);
