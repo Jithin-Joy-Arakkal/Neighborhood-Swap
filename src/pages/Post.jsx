@@ -1,4 +1,5 @@
 import { useItems } from "../context/ItemContext";
+import { useUsers } from "../context/UserContext";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import categories from "../data/categories";
@@ -9,6 +10,7 @@ import default_img from "../assets/default_img.png"
 
 function Post(){
     const { items, setItems } = useItems();
+    const { currentUser } = useUsers();
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
@@ -17,10 +19,10 @@ function Post(){
 
     const navigate = useNavigate();
 
-
     const handleCreatePost= () => {
         const newItem={
                 id : Date.now(),
+                ownerId : currentUser.id,
                 name,
                 description,
                 category,

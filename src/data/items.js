@@ -8,6 +8,7 @@ import AlarmClockImg from '../assets/images/Alarm_Clock.jpg';
 const initialItems = [
     {
         id : 1,
+        ownerId: 1,
         name : "Chopping Board",
         description : `Built from premium, solid wood, this cutting board is designed to withstand years of daily kitchen use. Its sturdy construction ensures it can handle heavy chopping, slicing, and dicing without warping, cracking, or breaking.`,
         category : "Kitchen Essentials",
@@ -17,6 +18,7 @@ const initialItems = [
     },
     {
         id : 2,
+        ownerId: 1,
         name : "Coffee Table",
         description : `Made of the finest quality engineered wood and robust particle board with a 15mm thickness, it is built to last and withstand the rigors of daily use. It features: 1 surface top and 2 shelves, offering ample storage space and a total load capacity of 35 kg`,
         category : "Furniture",
@@ -26,6 +28,7 @@ const initialItems = [
     },
     {
         id : 3,
+        ownerId: 1,
         name : "Ceiling Fan",
         description : `1200 mm; Colour: Brown; Power: 52 Watts; RPM: 390
         Low Power Consumption fan designed to save on your electricity bill. High speed ceiling fan with new shades and ribbed blades for enhancing aesthetics.`,
@@ -36,6 +39,7 @@ const initialItems = [
     },
     {
         id : 4,
+        ownerId: 1,
         name : "Mixer Grinder",
         description : `Mixer Grinder Powered by 75 W Heavy Duty Motor
 Customized 5 Jars for different grinding operations
@@ -48,6 +52,7 @@ Grind & Store Jar for Instant Fresh Grinding & Storage
     },
     {
         id : 5,
+        ownerId: 1,
         name : "Bedside Table",
         description : `Ideal Bedside Table for Bedroom. This compact wooden bedside table is perfect for everyday use beside the bed. A practical bed side table for bedroom that fits modern homes.`,
         category : "Furniture",
@@ -57,6 +62,7 @@ Grind & Store Jar for Instant Fresh Grinding & Storage
     },
     {
         id : 6,
+        ownerId: 1,
         name : "Alarm Clock",
         description : `Large, High-Contrast Display
 Smart Night Light Technology

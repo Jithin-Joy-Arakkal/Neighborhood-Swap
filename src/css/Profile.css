@@ -1,0 +1,112 @@
+h2{
+    color: black;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-white-container p{
+    color: black;
+}
+
+.green-container{
+    background-color: rgb(17, 126, 0, 0.5);
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.profile-white-container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.profilePic-container{
+    height: 15rem;
+    justify-content: center;
+    background-color: white;
+    overflow: hidden;
+    
+}
+
+.profilePic-container.active label{
+    cursor: pointer;
+}
+
+.profilePic-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.profile-details{
+    display: grid;
+    grid-template-columns: 5rem auto;
+    column-gap: 1rem;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.details-block{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.3rem;
+    height: fit-content;
+    width: 15rem;
+    background-color: white;
+    color: black;
+    font-family: "Afacad Variable";
+    font-size: 1rem;
+}
+
+.details-block.active{
+    background-color: lightgray;
+}
+
+.profile-white-container button{
+    border: 2px solid #117E00;
+    color:#117E00;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1vh;
+    width: 13vw;
+    font-size: 1rem;
+    font-family: "Afacad Variable";
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.buttons-box{
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons-box .delete-button{
+    background-color: crimson;
+    border: none;
+    color: white;
+}
+
+.buttons-box .delete-button:hover {
+    background-color: crimson;
+    filter: brightness(0.9);
+}
+
+.buttons-box .logout-button{
+    border: 2px solid crimson;
+    color: crimson;
+}
+
+.profile-white-container button:hover{
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}

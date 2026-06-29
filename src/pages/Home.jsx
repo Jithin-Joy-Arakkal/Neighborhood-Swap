@@ -44,7 +44,7 @@ function Home(){
                 }
                 />
             <div className="search-filter">
-                <p>Filters: </p>
+                <p>Filters:</p>
                 <button
                     className={`favourites-btn ${showFavourites ? "active" : ""}`}
                     onClick={() => setShowFavourites(prev => !prev)}
