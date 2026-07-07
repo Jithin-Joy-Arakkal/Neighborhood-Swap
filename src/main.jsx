@@ -8,13 +8,16 @@ import '@fontsource-variable/afacad';
 
 import './index.css'
 import App from './App.jsx'
+import { ChatProvider } from './context/ChatContext.jsx';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <ItemProvider>
         <UserProvider>
-          <App />
+          <ChatProvider>
+            <App />
+          </ChatProvider>
         </UserProvider>
       </ItemProvider>
     </BrowserRouter>

@@ -10,7 +10,9 @@ import SignUp from "./pages/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
 import MyPosts from "./pages/myposts.jsx";
 import Favourites from "./pages/favourites.jsx";
+import Chat from "./pages/Chat.jsx";
 import './App.css'
+import MyChats from "./pages/MyChats.jsx";
 
 
 function App() {
@@ -43,16 +45,24 @@ function App() {
           element={<ProtectedRoute><Item/></ProtectedRoute>}
         />
         <Route
-          path="/profile/:username"
+          path="/profile"
           element={<ProtectedRoute><Profile/></ProtectedRoute>}
         />
         <Route
-          path="/myposts/:id"
+          path="/myposts"
           element={<ProtectedRoute><MyPosts/></ProtectedRoute>}
         />
         <Route
-          path="/favourites/:id"
+          path="/favourites"
           element={<ProtectedRoute><Favourites/></ProtectedRoute>}
+        />
+        <Route
+          path="/chat/:itemId/:buyerId"
+          element={<ProtectedRoute><Chat/></ProtectedRoute>}
+        />
+        <Route
+          path="/mychats/:itemId"
+          element={<ProtectedRoute><MyChats/></ProtectedRoute>}
         />
       </Routes>
     </>

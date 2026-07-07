@@ -230,6 +230,22 @@ function Item(){
                     <p >{owner.name}</p>
                 </div>
             </div>
+            <div>{
+                    isOwner ?
+                    (
+                        <button type="button" 
+                        onClick={() => {navigate(`/mychats/${item.id}`)}}>
+                            My Chats
+                        </button>
+                    )
+                    :
+                    (
+                        <button type="button" 
+                        onClick={() => {navigate(`/chat/${item.id}/${currentUser.id}`)}}>
+                            Chat
+                        </button>
+                    )
+                }</div>
             
             { isOwner && (
                 <div>{

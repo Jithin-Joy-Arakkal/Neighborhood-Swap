@@ -65,9 +65,9 @@ function Navbar(){
                             <p>@{currentUser.username}</p>
                         </div>
                         <hr />
-                        <Link to={`/profile/${currentUser.username}`}><button>My Profile</button></Link>
-                        <Link to={`/favourites/${currentUser.id}`}><button>My Favourites</button></Link>
-                        <Link to={`/myposts/${currentUser.id}`}><button>My Posts</button></Link>
+                        <Link to={"/profile"}><button>My Profile</button></Link>
+                        <Link to={"/favourites"}><button>My Favourites</button></Link>
+                        <Link to={"/myposts/"}><button>My Posts</button></Link>
                         <hr />
                         <button 
                         className='logout-button'
