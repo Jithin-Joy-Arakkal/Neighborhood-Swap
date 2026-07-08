@@ -87,9 +87,10 @@
     border-radius: 10px;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1400px) {
     .card-section {
-        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 1rem;
     }
 }
 

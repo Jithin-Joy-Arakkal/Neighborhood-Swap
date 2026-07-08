@@ -42,12 +42,12 @@ h1{
     width: 100%;
     background-color: rgb(17, 126, 0, 0.6);
     margin-top: auto;
-    margin-bottom: 13vh;
+    margin-bottom: auto;
     border-radius: 10px;
     
 }
 
-p{
+.onboard-content p{
     color: white;
     padding: 0.5rem;
 }

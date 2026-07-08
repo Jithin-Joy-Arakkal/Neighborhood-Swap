@@ -227,10 +227,10 @@ function Item(){
                     <div className="ownerPic-container">
                         <img className="ownerPic" src={owner.profilePic} alt="OwnerPic" />
                     </div>
-                    <p >{owner.name}</p>
+                    <p>{owner.name}</p>
                 </div>
             </div>
-            <div>{
+            <div className="chat-buttons">{
                     isOwner ?
                     (
                         <button type="button" 
@@ -248,7 +248,7 @@ function Item(){
                 }</div>
             
             { isOwner && (
-                <div>{
+                <div className="item-buttons">{
                     isEditing ?
                     (   
                         <div className="edit-buttons">
