@@ -1,9 +1,10 @@
 .itemcard{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-template-columns: 10rem 1fr;
     gap: 1rem;
     background-color: white;
-    width: 30vw;
+    width: 100%;
+    justify-self: center;
 }
 
 .itemcard:hover{
@@ -19,6 +20,7 @@
     align-items: center;
     color: black;
     position: relative;
+    width: 100%;
 }
 
 .itemcard .type-container{
@@ -26,13 +28,16 @@
     background-color: rgb(85, 65, 238);
     color: white;
     padding: 0.2rem;
-    width: 5rem;
+    max-width: 5rem;
+    width: 100%;
     border-radius: 20px;
 }
 
 .itemcard .image-container{
-    height: 10rem;
-    width: 10rem;
+    max-height: 10rem;
+    height: 100%;
+    max-width: 10rem;
+    width: 100%;
     justify-content: center;
     background-color: white;
     overflow: hidden;

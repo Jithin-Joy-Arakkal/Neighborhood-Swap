@@ -1,11 +1,22 @@
 .content{
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    padding: 0.5rem;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
     align-items: center;
+}
+
+.search-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 400px;
+    width: 100%;
 }
 
 .searchbar{
@@ -13,18 +24,18 @@
     background-color: white;
     color: #117E00;
     padding: 0.5rem;
-    width: 17vw;
+    width: 100%;
     border-radius: 4px;
     border: 2px solid #117E00;
 }
 
 .search-filter{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     padding-top: 0.5rem;
-    height: 2rem;
+    width: 100%;
 }
 
 .favourites-btn{
@@ -44,16 +55,16 @@
     color: white;
 }
 
-.search-filter p{
+.search-box p{
     color: black;
 }
 
 .search-filter select{
     cursor: pointer;
-    height: 2rem;
+    width: 100%;
 }
 
-.search-filter .clear-btn{
+.search-box .clear-btn{
     width: fit-content;
     background: none;
     border: none;
@@ -65,15 +76,21 @@
 
 .card-section{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 equal columns */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 450px));
     gap: 2rem;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     margin-top: 5vh;
     background-color: rgb(17, 126, 0, 0.3);
-    width: fit-content;
+    width: 100%;
     padding: 2rem;
     border-radius: 10px;
+}
+
+@media (max-width: 1600px) {
+    .card-section {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    }
 }
 
 .no-items {

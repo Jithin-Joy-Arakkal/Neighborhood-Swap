@@ -27,14 +27,13 @@ function ItemGrid({ items, emptyMessage }){
 
     return(
         <div className="content">
-            
+            <div className="search-box">
             <input type="text" placeholder="Search items..." value={search} className="searchbar" 
             onChange={
                 (e) => setSearch(e.target.value)
             }
             />
             <div className="search-filter">
-                <p>Filters:</p>
 
                 <select
                     value={category}
@@ -70,7 +69,7 @@ function ItemGrid({ items, emptyMessage }){
                 >
                     Clear
                 </button>
-
+            </div>
             </div>
 
             <div className="card-section">
