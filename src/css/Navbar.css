@@ -16,7 +16,8 @@ nav{
     border-radius: 10px;
     text-align: center;
     display: inline-block;
-    width: 10vw;
+    max-width: 9rem;
+    width: 100%;
     text-decoration: none;
     font-size: 1rem;
 }
@@ -30,6 +31,8 @@ nav{
 .dropdown {
     position: relative;
     display: inline-block;
+    max-width: 9rem;
+    width: 100%;
 }
 
 .dropdown button{
@@ -38,7 +41,7 @@ nav{
     background-color: white;
     border-radius: 10px;
     padding: 0.5rem;
-    width: 10vw;
+    width: 100%;
     font-size: 1rem;
     font-family: "Afacad Variable";
     cursor: pointer;
@@ -103,9 +106,14 @@ nav{
     width: fit-content;
 }
 
+.dropdown-menu .dropdown-link{
+    width: 100%;
+}
+
 .dropdown-menu .logout-button{
     border: 2px solid crimson;
     color: crimson;
+    width: 100%;
 }
 
 hr{
