@@ -19,6 +19,10 @@ function MyChats() {
         return <p>Item not found.</p>;
     }
 
+    if(item.ownerId !== currentUser.id){
+        navigate("/home");
+    }
+
     const itemChats = chats
         .filter(chat =>
             chat.itemId === Number(itemId) &&

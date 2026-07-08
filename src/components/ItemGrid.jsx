@@ -25,16 +25,14 @@ function ItemGrid({ items, emptyMessage }){
         type === "All" ? true : item.type === type
     );
 
-    
-
     return(
         <div className="content">
             
-                <input type="text" placeholder="Search items..." value={search} className="searchbar" 
-                onChange={
-                    (e) => setSearch(e.target.value)
-                }
-                />
+            <input type="text" placeholder="Search items..." value={search} className="searchbar" 
+            onChange={
+                (e) => setSearch(e.target.value)
+            }
+            />
             <div className="search-filter">
                 <p>Filters:</p>
 

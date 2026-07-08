@@ -51,6 +51,19 @@ function SignUp(){
             return;
         }
 
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&^#()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+        if (!passwordRegex.test(formData.password)) {
+            alert(
+                "Password must contain at least:\n" +
+                "- 8 characters\n" +
+                "- 1 uppercase letter\n" +
+                "- 1 lowercase letter\n" +
+                "- 1 number\n" +
+                "- 1 special character"
+            );
+            return;
+        }
+
         const newUser = {
             id: Date.now(),
             name: formData.name,
@@ -125,6 +138,11 @@ function SignUp(){
                             className="confirm-password-input" 
                             value={formData.confirmPassword}
                             onChange={handleChange}/>
+
+                        <small>
+                            Password must be at least 8 characters and include an uppercase
+                            letter, lowercase letter, number, and special character.
+                        </small>
                         
                         <button type="submit">
                             Sign Up

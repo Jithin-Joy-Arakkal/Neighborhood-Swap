@@ -15,11 +15,15 @@ function Post(){
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
     const [type, setType] = useState("");
-    const [image, setImage] = useState(default_img);
+    const [image, setImage] = useState();
 
     const navigate = useNavigate();
 
     const handleCreatePost= () => {
+        if (!name || !description || !category || !type || !image) {
+            alert("Empty fields.");
+            return;
+        }
         const newItem={
                 id : Date.now(),
                 ownerId : currentUser.id,

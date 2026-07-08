@@ -5,7 +5,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
-    justify-content: left;
+    align-items: center;
 }
 
 .searchbar{
@@ -65,13 +65,13 @@
 
 .card-section{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-template-columns: repeat(3, 1fr); /* 2 equal columns */
     gap: 2rem;
     align-items: center;
     justify-items: center;
     margin-top: 5vh;
     background-color: rgb(17, 126, 0, 0.3);
-    width: 67vw;
+    width: fit-content;
     padding: 2rem;
     border-radius: 10px;
 }
