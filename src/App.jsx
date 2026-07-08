@@ -8,12 +8,11 @@ import Onboard from './pages/Onboard.jsx'
 import Item from './pages/Item.jsx'
 import SignUp from "./pages/SignUp.jsx";
 import Profile from "./pages/Profile.jsx";
-import MyPosts from "./pages/myposts.jsx";
-import Favourites from "./pages/favourites.jsx";
+import MyPosts from "./pages/MyPosts.jsx";
+import Favourites from "./pages/Favourites.jsx";
 import Chat from "./pages/Chat.jsx";
-import './App.css'
 import MyChats from "./pages/MyChats.jsx";
-
+import './App.css'
 
 function App() {
   
