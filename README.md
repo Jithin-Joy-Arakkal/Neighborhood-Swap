@@ -2,7 +2,56 @@
 
 ## Overview
 
-Neighborhood Swap is a React + Vite marketplace prototype for local item swapping, built with client-side state and in-memory data. Users can sign up, log in, create and manage item listings, favorite items, and chat directly with buyers or sellers.
+Neighborhood Swap is a React + Vite marketplace prototype that enables neighbors to exchange, donate, or request items within their local community. The application demonstrates user authentication, CRUD operations, favorites, and real-time-style buyer–seller messaging using client-side state.
+
+- 🌐 **Live Demo:** [View Website](https://neighborhood-swap.vercel.app/)
+- 🎨 **Figma Design:** [View Design](https://www.figma.com/design/Nto0xICqt2tRpOZB7NUUID/Neighborhood%E2%80%91Swap-%E2%80%93-UIUX?node-id=12-340&t=7nFc62Gf3Sf3oU4K-1)
+- ▶️ **Figma Prototype:** [View Prototype](https://www.figma.com/proto/Nto0xICqt2tRpOZB7NUUID/Neighborhood%E2%80%91Swap-%E2%80%93-UIUX?node-id=56-2512&p=f&t=QDu66pb24yNQcZ71-1&scaling=contain&content-scaling=fixed&page-id=12%3A342)
+
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/Login.png" width="350"><br>
+      <strong>Login</strong>
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/SignUp.png" width="350"><br>
+      <strong>Sign Up</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/Home.png" width="350"><br>
+      <strong>Home</strong>
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/Item.png" width="350"><br>
+      <strong>Item Details</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/CreatePost.png" width="350"><br>
+      <strong>Create Post</strong>
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/Profile.png" width="350"><br>
+      <strong>Profile</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/Chat.png" width="350"><br>
+      <strong>Chat</strong>
+    </td>
+    <td align="center">
+      <img src="docs/screenshots/MyChats.png" width="350"><br>
+      <strong>My Chats</strong>
+    </td>
+  </tr>
+</table>
 
 ## Key Features
 
@@ -22,7 +71,7 @@ Neighborhood Swap is a React + Vite marketplace prototype for local item swappin
   - Favourites page for saved items
 - Chat support
   - Buyer-to-seller conversations per item
-  - Seller chat dashboard for item-specific conversations
+  - Seller dashboard for viewing buyer conversations for each listed item.
   - Message history with automatic scroll to latest message
 
 ## App Pages / Routes
@@ -47,7 +96,7 @@ Neighborhood Swap is a React + Vite marketplace prototype for local item swappin
   - `UserContext` for user list, current user, favorites, and profile updates
   - `ChatContext` for chat creation and messaging
 - Data is initialized from local seed files in `src/data/`
-- State is stored in memory and does not persist after refresh
+- Application state is managed entirely with React Context and stored in memory; runtime changes are reset when the page is refreshed.
 
 ## Folder Structure
 
@@ -59,9 +108,11 @@ Neighborhood Swap is a React + Vite marketplace prototype for local item swappin
 
 ## Getting Started
 
-Install dependencies:
+Clone the repository and install dependencies:
 
 ```bash
+git clone <repository-url>
+cd Neighborhood-Swap
 npm install
 ```
 
@@ -91,37 +142,27 @@ npm run preview
 
 ## Tech Stack
 
+### Frontend
 - React 19
 - Vite
-- react-router-dom
+- React Router
+- Context API
+- CSS
+
+### Development
 - ESLint
+- Git
+- GitHub
+- Vercel
+
+## Future Improvements
+
+- Persistent backend database
+- Real-time messaging with WebSockets
+- Image storage using cloud services
+- Notifications
+- Advanced search and filtering
 
 ---
 
-Enjoy exploring Neighborhood Swap!
-
-## Screenshots
-
-### Login screen
-![Login screen](docs/screenshots/Login.png)
-
-### Sign up screen
-![Sign up screen](docs/screenshots/SignUp.png)
-
-### Home screen
-![Home screen](docs/screenshots/Home.png)
-
-### Create Post screen
-![Create Post screen](docs/screenshots/CreatePost.png)
-
-### Item screen
-![Item screen](docs/screenshots/Item.png)
-
-### Profile screen
-![Profile screen](docs/screenshots/Profile.png)
-
-### Chat screen
-![Chat screen](docs/screenshots/Chat.png)
-
-### MyChats screen
-![MyChats screen](docs/screenshots/MyChats.png)
+Created by Jithin Joy Arakkal.
