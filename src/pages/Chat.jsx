@@ -33,7 +33,7 @@ function Chat(){
         user => user.id === buyerIdNum
     );
 
-
+    const chattingWith = currentUser.id === buyer?.id ? owner : buyer;
 
     const chat = getChat(item.id, buyerIdNum, item.ownerId);
 
@@ -82,11 +82,7 @@ function Chat(){
     return(
         <div>
             <h2 className="mychats-heading">
-                Chatting with '{currentUser.id === buyer?.id ? (
-                    <h2 className="heading-name">{owner.name}</h2>
-                ) : (
-                    <h2 className="heading-name">{buyer?.name}</h2>
-                )}' on item '{item.name}'
+                Chatting with '{chattingWith?.name}' on item '{item.name}'
             </h2>
             <div className="green-container">
                 <div className="white-container">
