@@ -109,6 +109,7 @@ function Item(){
         }));
 
         setUsers(updatedUsers);
+        navigate("/home");
     }
 
     return(
@@ -281,9 +282,7 @@ function Item(){
                     <button 
                     type="button"
                     className="delete-button"
-                    onClick={() => {handleDeletePost();
-                        navigate("/home");
-                    }}
+                    onClick={() => {handleDeletePost()}}
                     >Delete Post</button>
                 </div>
             </div>
