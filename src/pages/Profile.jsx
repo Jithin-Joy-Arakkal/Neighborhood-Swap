@@ -123,58 +123,60 @@ function Profile(){
                         )
                     }
                     
-                    <div className="profile-details">
-                        <p>Name: </p><div>{
-                            isEditing ?
-                            (
-                                <input
-                                    className={`details-block ${isEditing ? "active" : ""}`}
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                />
-                            )
-                            :
-                            (
-                                <p className={`details-block ${isEditing ? "active" : ""}`}>
-                                    {currentUser.name}</p>
-                            )
-                        }</div>
+                    <div className="details-container">
+                        <div className="profile-details">
+                            <p>Name: </p><div>{
+                                isEditing ?
+                                (
+                                    <input
+                                        className={`details-block ${isEditing ? "active" : ""}`}
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                    />
+                                )
+                                :
+                                (
+                                    <p className={`details-block ${isEditing ? "active" : ""}`}>
+                                        {currentUser.name}</p>
+                                )
+                            }</div>
 
-                        <p>Username: </p><div>{
-                            isEditing ?
-                            (
-                                <input
-                                    className={`details-block ${isEditing ? "active" : ""}`}
-                                    name="username"
-                                    value={formData.username}
-                                    onChange={handleChange}
-                                />
-                            )
-                            :
-                            (
-                                <p className={`details-block ${isEditing ? "active" : ""}`}>
-                                    {currentUser.username}</p>
-                            )
-                        }</div>
+                            <p>Username: </p><div>{
+                                isEditing ?
+                                (
+                                    <input
+                                        className={`details-block ${isEditing ? "active" : ""}`}
+                                        name="username"
+                                        value={formData.username}
+                                        onChange={handleChange}
+                                    />
+                                )
+                                :
+                                (
+                                    <p className={`details-block ${isEditing ? "active" : ""}`}>
+                                        {currentUser.username}</p>
+                                )
+                            }</div>
 
-                        <p>Email: </p><div>{
-                            isEditing ?
-                            (
-                                <input
-                                    className={`details-block ${isEditing ? "active" : ""}`}
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                />
-                            )
-                            :
-                            (
-                                <p className={`details-block ${isEditing ? "active" : ""}`}>
-                                    {currentUser.email}</p>
-                            )
-                        }</div>
+                            <p>Email: </p><div>{
+                                isEditing ?
+                                (
+                                    <input
+                                        className={`details-block ${isEditing ? "active" : ""}`}
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                    />
+                                )
+                                :
+                                (
+                                    <p className={`details-block ${isEditing ? "active" : ""}`}>
+                                        {currentUser.email}</p>
+                                )
+                            }</div>
 
+                        </div>
                     </div>
                     
                     {
